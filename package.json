@@ -1,0 +1,13 @@
+{
+  "name": "anu-time-scraper",
+  "version": "0.1.0",
+  "description": "\"digitaize\" ANU course timetable",
+  "main": "bin/anu-time-scraper",
+  "repository": "https://github.com/wacky6/anu-time-scraper",
+  "author": "wacky6",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "superagent": "^3.8.1"
+  }
+}
