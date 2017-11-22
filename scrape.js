@@ -46,9 +46,7 @@ function scrapeTimetable(baseUrl) {
         const __viewStateGenerator = courseList$('#__VIEWSTATEGENERATOR').val()
         const __eventValidation = courseList$('#__EVENTVALIDATION').val()
 
-        const courseOptions = courseList$('#dlObject option')
-            .toArray()
-            .map(courseList$)  // turn into cheerio $ object
+        const courseOptions = courseList$('#dlObject option').toArray()
 
         console.log(`found ${courseOptions.length} courses`)
 
@@ -56,7 +54,7 @@ function scrapeTimetable(baseUrl) {
 
         STATE = 'FETCH_COURSE'
         for (let i=0; i!==courseOptions.length; ++i) {
-            const courseOption = courseOptions[i]
+            const courseOption = courseList$(courseOptions[i])
             const {
                 text: coursePage,
                 state: coursePageState
