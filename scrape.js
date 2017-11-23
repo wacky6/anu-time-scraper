@@ -1,4 +1,6 @@
 const superagent = require('superagent')
+require('superagent-retry')(superagent)
+
 const cheerio = require('cheerio')
 const { createWriteStream } = require('fs')
 
@@ -60,6 +62,7 @@ function scrapeTimetable(baseUrl) {
                 state: coursePageState
             } = await agent.post(baseUrl)
                 .type('form')
+                .retry(5)
                 .send({
                     __EVENTTARGET:        '',
                     __EVENTARGUMENT:      '',

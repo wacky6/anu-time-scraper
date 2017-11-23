@@ -208,6 +208,10 @@ string_decoder@~1.0.3:
   dependencies:
     safe-buffer "~5.1.0"
 
+superagent-retry@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.npmjs.org/superagent-retry/-/superagent-retry-0.6.0.tgz#e49b35ca96c0e3b1d0e3f49605136df0e0a028b7"
+
 superagent@^3.8.1:
   version "3.8.1"
   resolved "https://registry.npmjs.org/superagent/-/superagent-3.8.1.tgz#2571fd921f3fcdba43ac68c3b35c91951532701f"
